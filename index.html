@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exersize 2</title>
+    <style>
+      input {
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+
+    <hr />
+
+    <h1>Multiply Numbers</h1>
+    <label for="num1">Enter the first number:</label>
+    <input type="number" id="num1" /><br />
+    <label for="num2">Enter the second number:</label>
+    <input type="number" id="num2" /><br />
+    <button onclick="multiplyNumbers()">Multiply</button>
+    <p id="result"></p>
+
+    <hr />
+
+    <h1>Temperature Converter</h1>
+    <label for="fahrenheit">Enter temperature in Degrees Fahrenheit:</label>
+    <input type="number" id="fahrenheit" /><br />
+    <button onclick="convertTemperature()">Convert</button>
+    <p id="result2"></p>
+
+    <script>
+      function multiplyNumbers() {
+        let num1 = parseFloat(document.getElementById('num1').value)
+        let num2 = parseFloat(document.getElementById('num2').value)
+        let product = num1 * num2
+        document.getElementById('result').innerHTML =
+          'The product is: ' + product
+      }
+
+      function convertTemperature() {
+        let fahrenheit = parseFloat(document.getElementById('fahrenheit').value)
+        let celsius = (5 / 9) * (fahrenheit - 32)
+        document.getElementById('result2').innerHTML =
+          'Temperature in Degrees Celsius: ' + celsius.toFixed(2)
+      }
+    </script>
+  </body>
+</html>
